@@ -1,3 +1,4 @@
+
 const FakeStoreApi = {
     fetchAllProducts: async () => {
         const res = await fetch('https://fakestoreapi.com/products');
@@ -9,6 +10,7 @@ const FakeStoreApi = {
         const result = await res.json()
         return result
     },
+    //fetch api và trả về dữ liệu có chữ thường và so sánh xem nó có trùng với query không
     fetchProductsBySearchQuery: async (query) => {
         const res = await fetch("https://fakestoreapi.com/products")
         const result = await res.json()

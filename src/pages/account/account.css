@@ -1,0 +1,40 @@
+.loggin {
+    padding: 10px;
+    outline: none;
+    background-color: none;
+    white-space: nowrap;
+    color: white;
+    text-decoration: none;
+}
+.loggin:hover {
+    color: yellow;
+}
+.NewAccounts {
+    position: relative;
+    align-items: center;
+}
+.NewAccounts img{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+.NewAccounts p {
+
+    white-space: nowrap;
+}
+
+
+.dt {
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    color: black;
+    left: -13px;
+    display: none;
+}
+.NewAccounts:hover .dt {
+    cursor: pointer;
+    display: block;
+}

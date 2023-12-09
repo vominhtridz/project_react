@@ -7,6 +7,8 @@ import { Cart } from "./pages/cart"
 import { NotFound } from "./pages/not-found"
 
 import { useCart } from './context/cart'
+import Loggin from "./pages/account/loggin/loggin"
+import Register from "./pages/account/register/register"
 
 function App() {
 
@@ -25,6 +27,8 @@ function App() {
         <Route path="/product/:productId" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/loggin" element={<Loggin/>} />
+        <Route path="/register" element={<Register/>} />
       </Routes>
     </>
   );
