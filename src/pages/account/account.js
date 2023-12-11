@@ -7,14 +7,15 @@ const Account= () =>{
     const [checkAccount,setCheckAccount] = useState(false)
     useEffect(()=>{
         //lấy dữ liệu trên localstrange về rồi kiểm tra xem có sẳn không 
-        const checkAccount = localStorage.getItem('checkAccount')
-        if(!checkAccount) setCheckAccount(false)
-        else if(checkAccount != null) setCheckAccount(true)
+        const checkAccounts = localStorage.getItem('checkAccount')
+        if(checkAccounts) setCheckAccount(true)
+        else if(!checkAccounts) setCheckAccount(false)
     },[localStorage])
 
     const OutAccount =()=>{
         localStorage.setItem('checkAccount', false)
-        window.location.reload()
+        setCheckAccount(false)
+        console.log(checkAccount)
     }
     return (
         // nếu k có tài khoản thì hiện cái trên còn không thì hiện ảnh có tk

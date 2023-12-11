@@ -1,0 +1,78 @@
+.ProductReview {
+    padding: 3rem;
+}
+  
+  .header1 {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+  }
+  
+  .product {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rating {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .star {
+    color: #f39c12;
+  }
+  
+  .review {
+    font-style: italic;
+    color: #555;
+  }
+.danhgia {
+    border: none;
+    padding: 12px 20px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+  }
+  
+  .thanks {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .thanks p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .thanks a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  

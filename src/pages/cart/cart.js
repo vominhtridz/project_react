@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
 import { useCart } from "../../context/cart"
 import "./cart.css"
-
+import { useNavigate } from "react-router-dom"
 const SHIPPING_CHARGES = 25
 
 const Cart = () => {
+    const navigate = useNavigate()
     const { cart, removeFromCart, increaseQuantity, decreaseQuantity } = useCart()
 
     const cartTotal = () => {
@@ -13,6 +14,10 @@ const Cart = () => {
 
     const round = (value, decimals) => {
         return Number(Math.round(value + "e" + decimals) + "e-" + decimals)
+    }
+    const handlepayment =()=>{
+        // chuyển sang trang thanh toán
+        navigate('/payment')
     }
 
     return (
@@ -80,6 +85,7 @@ const Cart = () => {
                                     <span>Total:</span>
                                     <span className="price">${round(cartTotal() + SHIPPING_CHARGES, 2)}</span>
                                 </div>
+                                <button className="thanhtoan" onClick={handlepayment}>Thanh toán</button>
                             </div>
                         </div>
                     </div>

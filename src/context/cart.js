@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useEffect, useState } from "react"
 
 const initialState = {
     cart: [],
@@ -8,19 +8,20 @@ const initialState = {
     increaseQuantity: () => null,
     decreaseQuantity: () => null,
 }
-
+// phần cart
 const CartContext = createContext(initialState)
 
 const useCart = () => useContext(CartContext)
 
 const CartProvider = ({ children }) => {
+    
     const [cart, setCart] = useState(initialState.cart)
-
     const cartItemCount = () => {
         return cart.reduce((acc, item) => acc + item.quantity, 0)
     }
 
     const addToCart = (product) => {
+  
         const productIdx = cart.findIndex((item) => item.product.id === product.id)
         if (productIdx !== -1) {
             increaseQuantity(product.id)
@@ -28,7 +29,9 @@ const CartProvider = ({ children }) => {
             setCart([...cart, { product, quantity: 1 }])
         }
     }
-
+    const RemoveAllCart = ()=>{
+        setCart([])
+    }
     const removeFromCart = (productId) => {
         setCart(cart.filter((item) => item.product.id !== productId))
     }
@@ -53,7 +56,7 @@ const CartProvider = ({ children }) => {
 
     return (
         <CartContext.Provider
-            value={{ cart, cartItemCount, addToCart, removeFromCart, increaseQuantity, decreaseQuantity }}
+            value={{ cart, cartItemCount, addToCart, removeFromCart, increaseQuantity, decreaseQuantity,RemoveAllCart}}
         >
             {children}
         </CartContext.Provider>

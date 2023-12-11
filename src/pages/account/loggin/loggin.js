@@ -16,6 +16,7 @@ function Loggin() {
         if(AccountItems) {
             alert('Loggin success!')
             localStorage.setItem('checkAccount', true)
+            localStorage.setItem('AccountCurrent', JSON.stringify({name,pwd}))
              navigate('/')
              window.location.reload()
         }
@@ -24,6 +25,8 @@ function Loggin() {
 
 const changeName = (e)=> setName(e.target.value)
 const changePwd = (e)=> setPwd(e.target.value)
+
+
     return ( <div className= 'main'>
     <div className="login-container">
     <div className="login-header">

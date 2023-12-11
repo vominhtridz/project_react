@@ -1,0 +1,19 @@
+/* ScrollToTop.css */
+.scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    background-color: blue;
+    padding: 1rem;
+    color: white;
+    border-radius: 100%;
+  }
+  
+  .scroll-to-top.visible {
+    display: block;
+  }
+  
