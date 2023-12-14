@@ -35,13 +35,14 @@ const NavBar = ({ onSearch, cartItemCount }) => {
                                     />
                                 </div>
                                 <button type="button" className="search-btn" onClick={handleSubmit} >
-                                    Search
+                                    tìm kiếm
                                 </button>
                             </form>
                         </div>
                         {/* link tới trang tất cả sản phẩm */}
                         <Link to='/allproducts' className="link">Tất cả Sản phẩm</Link>
                         <Link to='/productsreview' className="link" style={{whiteSpace: 'nowrap'}}>Đánh giá sản phẩm</Link>
+                       
                         <Link to="/cart" className="link headerCart">
                             <img className="cartImg" src="/cart.svg" alt="cart" />
                             {/* nếu số lượng product lớn hơn 0 thì hiện cái này */}

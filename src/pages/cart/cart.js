@@ -71,18 +71,18 @@ const Cart = () => {
                             ))}
                         </div>
                         <div className="payment p-3">
-                            <h2>Payment Summary</h2>
+                            <h2>Tóm tắt thanh toán</h2>
                             <div className="summary py-3 my-2">
                                 <div className="flex py-1">
-                                    <span>Subtotal:</span>
+                                    <span>Tổng phụ:</span>
                                     <span className="price">${round(cartTotal(), 2)}</span>
                                 </div>
                                 <div className="flex py-1">
-                                    <span>Shipping Fee:</span>
+                                    <span>phí vận chuyển:</span>
                                     <span className="price">${SHIPPING_CHARGES}</span>
                                 </div>
                                 <div className=" flex py-1">
-                                    <span>Total:</span>
+                                    <span>Tổng:</span>
                                     <span className="price">${round(cartTotal() + SHIPPING_CHARGES, 2)}</span>
                                 </div>
                                 <button className="thanhtoan" onClick={handlepayment}>Thanh toán</button>
